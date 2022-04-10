@@ -28,7 +28,7 @@ class Kmeans:
         :return: a Numpy array of k cluster centroids, one per row
         """
         # TODO
-        return np.asarray(random.sample(list(np.unique(self.X, axis=1)), self.K))
+        return np.array(random.sample(list(np.unique(self.X, axis=1)), self.K))
 
     def euclidean_dist(self, x, y):
         """
@@ -39,7 +39,6 @@ class Kmeans:
         :return: the Euclidean distance between x and y
         """
         # TODO
-        
         return np.linalg.norm(x-y)
 
     def closest_centroids(self):
