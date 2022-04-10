@@ -99,7 +99,7 @@ class Kmeans:
             clusters[j] = clusters[j]/num_points_cluster[j]
         
         convergence = clusters == self.centroids
-        self.centroids = clusters
+        self.centroids = np.array(clusters)
 
         if convergence.all():
             return True
